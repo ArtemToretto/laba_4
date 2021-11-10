@@ -21,5 +21,41 @@ namespace laba_4
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            drinks.Clear();
+            add_Drinks();
+            richTextBox2.Text = drinks[0].info();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            drinks.RemoveAt(0);
+            richTextBox2.Text = drinks[0].info();
+        }
+
+        private void add_Drinks()
+        {
+            Random random = new Random();
+            for (int i = 0; i < 15; i++)
+            {
+                int drinkType = random.Next(0, 2);
+                if (drinkType == 0)
+                {
+                    drinks.Add(Juice.Generate());
+                }
+                if (drinkType == 1)
+                {
+                    Soda soda = new Soda();
+                    drinks.Add(soda);
+                }
+                if (drinkType == 2)
+                {
+                    Alco alco = new Alco();
+                    drinks.Add(alco);
+                }
+            }
+        }
     }
 }
