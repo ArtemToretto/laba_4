@@ -30,6 +30,7 @@ namespace laba_4
             drinks.Clear();
             add_Drinks();
             richTextBox2.Text = drinks[0].info();
+            showImage();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -62,6 +63,7 @@ namespace laba_4
                     richTextBox2.Text = "Напитки закончились!\nПерезаполните автомат!";
                 }
                 countInformation();
+                showImage();
             }
         }
 
@@ -98,8 +100,56 @@ namespace laba_4
             richTextBox1.Text = information;
             if (drinks.Count>1)
             {
-                richTextBox1.Text += $"\n\n{drinks[1].getDrinkType()}";
+                richTextBox1.Text += $"\n\n Следующий напиток в очереди: {drinks[1].getDrinkType()}";
             }
+            showImage();
+        }
+        private void showImage()
+        {
+            if (drinks.Count != 0)
+            {
+                String drink = drinks[0].getDrinkType();
+                switch (drink)
+                {
+                    case "Водка":
+                        pictureBox1.Image = Properties.Resources._1;
+                        break;
+                    case "Пиво":
+                        pictureBox1.Image = Properties.Resources._3;
+                        break;
+                    case "Вино":
+                        pictureBox1.Image = Properties.Resources._2;
+                        break;
+                    case "CocaCola":
+                        pictureBox1.Image = Properties.Resources._4;
+                        break;
+                    case "Sprite":
+                        pictureBox1.Image = Properties.Resources._6;
+                        break;
+                    case "Pepsi":
+                        pictureBox1.Image = Properties.Resources._7;
+                        break;
+                    case "Fanta":
+                        pictureBox1.Image = Properties.Resources._5;
+                        break;
+                    case "Яблочный сок":
+                        pictureBox1.Image = Properties.Resources._8;
+                        break;
+                    case "Апельсиновый сок":
+                        pictureBox1.Image = Properties.Resources._9;
+                        break;
+                    case "Томатный сок":
+                        pictureBox1.Image = Properties.Resources._11;
+                        break;
+                    case "Банановый сок":
+                        pictureBox1.Image = Properties.Resources.banan;
+                        break;
+                    default:
+                        pictureBox1.Image = Properties.Resources.grey_white_background;
+                        break;
+                }
+            }
+            else { pictureBox1.Image = Properties.Resources.grey_white_background; }
         }
     }
 }
