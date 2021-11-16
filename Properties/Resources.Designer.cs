@@ -22,7 +22,7 @@ namespace laba_4.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace laba_4.Properties {
         ///   Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("laba_4.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace laba_4.Properties {
         ///   обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace laba_4.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1 {
+        public static System.Drawing.Bitmap _1 {
             get {
                 object obj = ResourceManager.GetObject("_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,17 +73,7 @@ namespace laba_4.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _10 {
-            get {
-                object obj = ResourceManager.GetObject("_10", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _11 {
+        public static System.Drawing.Bitmap _11 {
             get {
                 object obj = ResourceManager.GetObject("_11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +83,7 @@ namespace laba_4.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _2 {
+        public static System.Drawing.Bitmap _2 {
             get {
                 object obj = ResourceManager.GetObject("_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +93,7 @@ namespace laba_4.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _3 {
+        public static System.Drawing.Bitmap _3 {
             get {
                 object obj = ResourceManager.GetObject("_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +103,7 @@ namespace laba_4.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4 {
+        public static System.Drawing.Bitmap _4 {
             get {
                 object obj = ResourceManager.GetObject("_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +113,7 @@ namespace laba_4.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _5 {
+        public static System.Drawing.Bitmap _5 {
             get {
                 object obj = ResourceManager.GetObject("_5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +123,7 @@ namespace laba_4.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _6 {
+        public static System.Drawing.Bitmap _6 {
             get {
                 object obj = ResourceManager.GetObject("_6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +133,7 @@ namespace laba_4.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _7 {
+        public static System.Drawing.Bitmap _7 {
             get {
                 object obj = ResourceManager.GetObject("_7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +143,7 @@ namespace laba_4.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _8 {
+        public static System.Drawing.Bitmap _8 {
             get {
                 object obj = ResourceManager.GetObject("_8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,9 +153,29 @@ namespace laba_4.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _9 {
+        public static System.Drawing.Bitmap _9 {
             get {
                 object obj = ResourceManager.GetObject("_9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap banan {
+            get {
+                object obj = ResourceManager.GetObject("banan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap grey_white_background {
+            get {
+                object obj = ResourceManager.GetObject("grey_white_background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
