@@ -12,6 +12,7 @@ namespace laba_4
             String info = $"Объем: {size}";
             return info;
         }
+        public virtual String getDrinkType() { return ""; }
         public static double randSize()
         {
             Random randSize = new Random();
@@ -21,7 +22,7 @@ namespace laba_4
     }
     public class Juice: Drink
     {
-        public JuiceFruit fruit = JuiceFruit.apple;
+        public JuiceFruit fruit = JuiceFruit.яблочный;
         public bool pulp = false;
 
         public override String info()
@@ -29,11 +30,11 @@ namespace laba_4
             String info = "";
             if (pulp)
             {
-               info = $"Сок со вкусом {fruit}\nС мякотью\n{base.info()}";
+               info = $"Сок {fruit}\nС мякотью\n{base.info()}";
             }
             else
             {
-               info = $"Сок со вкусом {fruit}\nБез мякоти\n{base.info()}";
+               info = $"Сок {fruit}\nБез мякоти\n{base.info()}";
 
             }
             return info;
@@ -46,6 +47,12 @@ namespace laba_4
             Random randPulp = new Random();
             bool pulp = randPulp.Next(0, 2) == 0;
             return new Juice { fruit = (JuiceFruit)fruit, pulp = pulp, size=randSize() };
+        }
+
+        public override String getDrinkType()
+        {
+            String type= $"Следующий в очереди: {fruit} сок";
+            return type;
         }
     }
     public class Soda: Drink 
@@ -69,18 +76,24 @@ namespace laba_4
             int bubbles = randBubbles.Next(1000, 50000);
             return new Soda { type = (SodaType)type, bubbles=bubbles, size = randSize() };
         }
+
+        public override String getDrinkType()
+        {
+            String typeSoda = $"Следующий в очереди: {type}";
+            return typeSoda;
+        }
     }
 
 
     public class Alco: Drink
     {
-        public AlcoType type = AlcoType.Beer;
+        public AlcoType type = AlcoType.Пиво;
         public double alcoPercent = 10;
 
         public override String info()
         {
             String info = "";
-            info = $"Алкоголь типа {type}\nСодержание алкоголя: {alcoPercent}%\n{base.info()}";
+            info = $"{type}\nСодержание алкоголя: {alcoPercent}%\n{base.info()}";
             return info;
         }
 
@@ -92,8 +105,14 @@ namespace laba_4
             double percent = Math.Round((double)randPercent.Next(21, 300)/7,1);
             return new Alco { type = (AlcoType)type, alcoPercent = percent, size = randSize() };
         }
+
+        public override String getDrinkType()
+        {
+            String typeAlco = $"Следующий в очереди: {type}";
+            return typeAlco;
+        }
     }
-    public enum JuiceFruit { apple,orange,banana,tomato }
+    public enum JuiceFruit { яблочный,апельсиновый,банановый,томатный }
     public enum SodaType { CocaCola,Sprite,Fanta,Pepsi }
-    public enum AlcoType { Beer,Vodka,Wine }
+    public enum AlcoType { Пиво,Водка,Вино }
 }

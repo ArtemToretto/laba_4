@@ -94,8 +94,12 @@ namespace laba_4
         }
         private void countInformation()
         {
-            String information = $"Газировка: {sodaCount} Сок: {juiceCount} Алкоголь: {alcoCount}";
+            String information = $"Количество напитков:\nГазировка: {sodaCount} Сок: {juiceCount} Алкоголь: {alcoCount}";
             richTextBox1.Text = information;
+            if (drinks.Count>1)
+            {
+                richTextBox1.Text += $"\n\n{drinks[1].getDrinkType()}";
+            }
         }
     }
 }
