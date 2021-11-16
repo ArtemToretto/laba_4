@@ -120,7 +120,7 @@ namespace laba_4
             this.Controls.Add(this.Button1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Торговый автомат";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

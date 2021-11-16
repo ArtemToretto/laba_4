@@ -22,7 +22,7 @@ namespace laba_4
     }
     public class Juice: Drink
     {
-        public JuiceFruit fruit = JuiceFruit.яблочный;
+        public JuiceFruit fruit = JuiceFruit.Яблочный;
         public bool pulp = false;
 
         public override String info()
@@ -51,7 +51,7 @@ namespace laba_4
 
         public override String getDrinkType()
         {
-            String type= $"Следующий в очереди: {fruit} сок";
+            String type = $"{fruit} сок";
             return type;
         }
     }
@@ -79,8 +79,7 @@ namespace laba_4
 
         public override String getDrinkType()
         {
-            String typeSoda = $"Следующий в очереди: {type}";
-            return typeSoda;
+            return type.ToString();
         }
     }
 
@@ -108,11 +107,10 @@ namespace laba_4
 
         public override String getDrinkType()
         {
-            String typeAlco = $"Следующий в очереди: {type}";
-            return typeAlco;
+            return type.ToString();
         }
     }
-    public enum JuiceFruit { яблочный,апельсиновый,банановый,томатный }
+    public enum JuiceFruit { Яблочный,Апельсиновый,Банановый,Томатный }
     public enum SodaType { CocaCola,Sprite,Fanta,Pepsi }
     public enum AlcoType { Пиво,Водка,Вино }
 }
