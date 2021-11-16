@@ -9,7 +9,7 @@ namespace laba_4
        public double size = 2;
        public virtual String info()
         {
-            String info = $"объем: {size}";
+            String info = $"Объем: {size}";
             return info;
         }
         public static double randSize()
@@ -29,11 +29,11 @@ namespace laba_4
             String info = "";
             if (pulp)
             {
-               info = $"Сок, со вкусом {fruit}, с мякотью, {base.info()}";
+               info = $"Сок со вкусом {fruit}\nС мякотью\n{base.info()}";
             }
             else
             {
-               info = $"Сок, со вкусом {fruit}, без мякоти, {base.info()}";
+               info = $"Сок со вкусом {fruit}\nБез мякоти\n{base.info()}";
 
             }
             return info;
@@ -52,11 +52,46 @@ namespace laba_4
     {
         public SodaType type = SodaType.CocaCola;
         public int bubbles = 10000;
+
+
+        public override String info()
+        {
+            String info = "";
+                info = $"Газировочка {type}\nКоличество пузырьков газа: {bubbles}\n{base.info()}";
+            return info;
+        }
+
+        public static Soda Generate()
+        {
+            Random randType = new Random();
+            int type = randType.Next(0, 4);
+            Random randBubbles = new Random();
+            int bubbles = randBubbles.Next(1000, 50000);
+            return new Soda { type = (SodaType)type, bubbles=bubbles, size = randSize() };
+        }
     }
+
+
     public class Alco: Drink
     {
         public AlcoType type = AlcoType.Beer;
         public double alcoPercent = 10;
+
+        public override String info()
+        {
+            String info = "";
+            info = $"Алкоголь типа {type}\nСодержание алкоголя: {alcoPercent}%\n{base.info()}";
+            return info;
+        }
+
+        public static Alco Generate()
+        {
+            Random randType = new Random();
+            int type = randType.Next(0, 3);
+            Random randPercent = new Random();
+            double percent = Math.Round((double)randPercent.Next(21, 300)/7,1);
+            return new Alco { type = (AlcoType)type, alcoPercent = percent, size = randSize() };
+        }
     }
     public enum JuiceFruit { apple,orange,banana,tomato }
     public enum SodaType { CocaCola,Sprite,Fanta,Pepsi }
